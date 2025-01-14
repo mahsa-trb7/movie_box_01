@@ -1,0 +1,195 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.bg-custom {
+    background-color: #333333;
+}
+
+.btn-login {
+    border-radius: 25px;
+    padding: 10px 20px;
+    border: none;
+    color: #ffffff;
+    background-color: #ff9800;
+    transition: background-color 0.3s ease;
+}
+
+.btn-login:hover {
+    background-color: #e67e22;
+}
+
+.search-bar {
+    border-radius: 25px;
+    background-color: #ff9800;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+}
+
+.slider-container {
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1; /* اضافه کردن این خط */
+}
+
+.slider-container h2 {
+    color: #ff9800;
+    margin-bottom: 20px;
+}
+
+.trending-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 80px;
+    box-sizing: border-box;
+    margin: 0; /* حذف فاصله بین ترندینگ و فیلم‌ها */
+}
+
+.movie-scroll-container {
+    width: calc(100% - 200px); /* تنظیم عرض با توجه به فاصله 100 پیکسلی از دو طرف */
+    margin: 0 auto; /* مرکز کردن بخش فیلم‌ها */
+    overflow-x: auto; /* اسکرول افقی */
+    overflow-y: hidden; /* جلوگیری از اسکرول عمودی */
+    -webkit-overflow-scrolling: touch; /* برای تجربه بهتر اسکرول در موبایل */
+    display: flex;
+    justify-content: flex-start; /* فیلم‌ها دقیقا از زیر ترندینگ شروع می‌شوند */
+    padding-top: 0; /* حذف فاصله اضافی بالایی */
+    margin: 0; /* حذف فاصله اضافی */
+    scrollbar-width: none; /* مخفی کردن نوار اسکرول */
+}
+
+.movie-scroll-container::-webkit-scrollbar {
+    display: none; /* مخفی کردن نوار اسکرول */
+}
+
+.movie-container {
+    display: flex;
+    gap: 20px; /* کاهش فاصله بین آیتم‌ها برای مرتب‌تر شدن */
+    white-space: nowrap; /* جلوگیری از انتقال به خطوط جدید */
+    padding: 0; /* حذف فاصله اضافی */
+}
+
+.movie-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* فاصله بین آیتم‌ها */
+    align-items: center;
+}
+
+.movie-item, .movie-placeholder {
+    flex: 0 0 auto;
+    width: 150px; /* عرض ثابت برای آیتم‌ها */
+    height: 225px; /* ارتفاع ثابت برای آیتم‌ها */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.movie-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* برای پوشش کامل تصویر در ابعاد داده‌شده */
+    border-radius: 8px;
+}
+
+.movie-placeholder {
+    background: linear-gradient(135deg, #ff9800, #e67e22);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.more-link {
+    text-decoration: none;
+    color: #ff9800;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.more-link:hover {
+    color: #e67e22;
+}
+
+.category-scroll-container {
+    width: calc(100% - 200px); /* تنظیم عرض با توجه به فاصله 100 پیکسلی از دو طرف */
+    margin: 0 auto; /* مرکز کردن بخش کتگوری‌ها */
+    overflow-x: auto; /* اسکرول افقی */
+    overflow-y: hidden; /* جلوگیری از اسکرول عمودی */
+    -webkit-overflow-scrolling: touch; /* برای تجربه بهتر اسکرول در موبایل */
+    display: flex;
+    justify-content: flex-start; /* کتگوری‌ها دقیقا از زیر ترندینگ شروع می‌شوند */
+    padding-top: 0; /* حذف فاصله اضافی بالایی */
+    margin: 0; /* حذف فاصله اضافی */
+    scrollbar-width: none; /* مخفی کردن نوار اسکرول */
+}
+
+.category-scroll-container::-webkit-scrollbar {
+    display: none; /* مخفی کردن نوار اسکرول */
+}
+
+.category-container {
+    display: flex;
+    gap: 10px; /* فاصله بین دکمه‌های کتگوری */
+    white-space: nowrap; /* جلوگیری از انتقال به خطوط جدید */
+    padding: 0; /* حذف فاصله اضافی */
+}
+
+.category-box {
+    background-color: #ff9800; /* رنگ پس‌زمینه */
+    color: #ffffff; /* رنگ متن */
+    border: none;
+    border-radius: 25px; /* گردی گوشه‌ها */
+    padding: 15px 30px; /* اندازه داخلی دکمه‌ها */
+    font-size: 18px; /* اندازه فونت */
+    font-weight: bold;
+    margin: 5px; /* فاصله بین دکمه‌ها */
+    cursor: pointer; /* شکل نشانگر موس */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* سایه دکمه‌ها */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* انتقال برای تغییرات رنگ و ابعاد */
+}
+
+.category-box:hover {
+    background-color: #e67e22; /* رنگ هنگام هاور شدن */
+    transform: scale(1.05); /* افکت بزرگنمایی هنگام هاور شدن */
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+.trending-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 100px; /* فاصله بیشتر بین دو ردیف */
+    justify-items: center;
+}
+
+footer {
+    margin-top: auto;
+    padding: 10px 0; /* افزودن padding به فوتر */
+}
