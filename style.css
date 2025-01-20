@@ -2,20 +2,48 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 body {
     background-color: #121212;
     color: #ffffff;
     font-family: 'Arial', sans-serif;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    flex: 1;
+    width: 100%;
+}
+
+.container {
+    flex: 1;
+    width: 100%;
+}
+
+footer {
+    margin-top: auto;
+    background-color: #333333;
+    padding: 10px 0;
+    width: 100%;
 }
 
 .bg-custom {
-    background-color: #333334;
+    background-color: #333333;
+    width: 100%;
 }
+
+.logo-img {
+    height: 50px; /* ارتفاع دلخواه برای لوگو */
+    width: auto; /* عرض به طور خودکار تنظیم می‌شود */
+}
+
+.logo-text {
+    color: #ff9800; /* رنگ نارنجی برای متن */
+    margin-left: 10px; /* فاصله بین لوگو و متن */
+    align-self: flex-end; /* تنظیم متن به پایین لوگو */
+}
+
+
 
 .btn-login {
     border-radius: 25px;
@@ -30,13 +58,17 @@ body {
     background-color: #e67e22;
 }
 
+.search-container {
+    width: 100%;
+}
+
 .search-bar {
     border-radius: 25px;
     background-color: #ff9800;
     color: #ffffff;
     border: none;
     padding: 10px 20px;
-    margin-left: 10px;
+    width: 100%;
 }
 
 .slider-container {
@@ -47,7 +79,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex: 1; /* اضافه کردن این خط */
+    flex: 1;
+    width: 100%;
 }
 
 .slider-container h2 {
@@ -62,52 +95,54 @@ body {
     align-items: center;
     padding: 0 80px;
     box-sizing: border-box;
-    margin: 0; /* حذف فاصله بین ترندینگ و فیلم‌ها */
+    margin: 0;
 }
 
+
 .movie-scroll-container {
-    width: calc(100% - 200px); /* تنظیم عرض با توجه به فاصله 100 پیکسلی از دو طرف */
-    margin: 0 auto; /* مرکز کردن بخش فیلم‌ها */
-    overflow-x: auto; /* اسکرول افقی */
-    overflow-y: hidden; /* جلوگیری از اسکرول عمودی */
-    -webkit-overflow-scrolling: touch; /* برای تجربه بهتر اسکرول در موبایل */
+    width: calc(100% - 200px);
+    margin: 0 auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
     display: flex;
-    justify-content: flex-start; /* فیلم‌ها دقیقا از زیر ترندینگ شروع می‌شوند */
-    padding-top: 0; /* حذف فاصله اضافی بالایی */
-    margin: 0; /* حذف فاصله اضافی */
-    scrollbar-width: none; /* مخفی کردن نوار اسکرول */
+    justify-content: flex-start;
+    padding-top: 0;
+    margin: 0;
+    scrollbar-width: none;
 }
 
 .movie-scroll-container::-webkit-scrollbar {
-    display: none; /* مخفی کردن نوار اسکرول */
+    display: none;
 }
 
 .movie-container {
     display: flex;
-    gap: 20px; /* کاهش فاصله بین آیتم‌ها برای مرتب‌تر شدن */
-    white-space: nowrap; /* جلوگیری از انتقال به خطوط جدید */
-    padding: 0; /* حذف فاصله اضافی */
+    gap: 20px;
+    white-space: nowrap;
+    padding: 0;
 }
 
 .movie-list-container {
     display: flex;
     flex-direction: column;
-    gap: 20px; /* فاصله بین آیتم‌ها */
+    gap: 20px;
     align-items: center;
 }
 
 .movie-item, .movie-placeholder {
     flex: 0 0 auto;
-    width: 150px; /* عرض ثابت برای آیتم‌ها */
-    height: 225px; /* ارتفاع ثابت برای آیتم‌ها */
+    width: 150px;
+    height: 225px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
 }
 
 .movie-img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* برای پوشش کامل تصویر در ابعاد داده‌شده */
+    object-fit: cover;
     border-radius: 8px;
 }
 
@@ -119,6 +154,7 @@ body {
     color: #ffffff;
     font-weight: bold;
     padding: 10px;
+    margin-bottom: 20px;
 }
 
 .more-link {
@@ -133,46 +169,46 @@ body {
 }
 
 .category-scroll-container {
-    width: calc(100% - 200px); /* تنظیم عرض با توجه به فاصله 100 پیکسلی از دو طرف */
-    margin: 0 auto; /* مرکز کردن بخش کتگوری‌ها */
-    overflow-x: auto; /* اسکرول افقی */
-    overflow-y: hidden; /* جلوگیری از اسکرول عمودی */
-    -webkit-overflow-scrolling: touch; /* برای تجربه بهتر اسکرول در موبایل */
+    width: calc(100% - 200px);
+    margin: 0 auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
     display: flex;
-    justify-content: flex-start; /* کتگوری‌ها دقیقا از زیر ترندینگ شروع می‌شوند */
-    padding-top: 0; /* حذف فاصله اضافی بالایی */
-    margin: 0; /* حذف فاصله اضافی */
-    scrollbar-width: none; /* مخفی کردن نوار اسکرول */
+    justify-content: flex-start;
+    padding-top: 0;
+    margin: 0;
+    scrollbar-width: none;
 }
 
 .category-scroll-container::-webkit-scrollbar {
-    display: none; /* مخفی کردن نوار اسکرول */
+    display: none;
 }
 
 .category-container {
     display: flex;
-    gap: 10px; /* فاصله بین دکمه‌های کتگوری */
-    white-space: nowrap; /* جلوگیری از انتقال به خطوط جدید */
-    padding: 0; /* حذف فاصله اضافی */
+    gap: 10px;
+    white-space: nowrap;
+    padding: 0;
 }
 
 .category-box {
-    background-color: #ff9800; /* رنگ پس‌زمینه */
-    color: #ffffff; /* رنگ متن */
+    background-color: #ff9800;
+    color: #ffffff;
     border: none;
-    border-radius: 25px; /* گردی گوشه‌ها */
-    padding: 15px 30px; /* اندازه داخلی دکمه‌ها */
-    font-size: 18px; /* اندازه فونت */
+    border-radius: 25px;
+    padding: 15px 30px;
+    font-size: 18px;
     font-weight: bold;
-    margin: 5px; /* فاصله بین دکمه‌ها */
-    cursor: pointer; /* شکل نشانگر موس */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* سایه دکمه‌ها */
-    transition: background-color 0.3s ease, transform 0.3s ease; /* انتقال برای تغییرات رنگ و ابعاد */
+    margin: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .category-box:hover {
-    background-color: #e67e22; /* رنگ هنگام هاور شدن */
-    transform: scale(1.05); /* افکت بزرگنمایی هنگام هاور شدن */
+    background-color: #e67e22;
+    transform: scale(1.05);
 }
 
 .category-grid {
@@ -185,12 +221,53 @@ body {
 .trending-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 100px; /* فاصله بیشتر بین دو ردیف */
+    gap: 100px;
     justify-items: center;
 }
 
-footer {
-    margin-top: auto;
-    padding: 10px 0; /* افزودن padding به فوتر */
+/* اضافه کردن این بخش برای ایجاد فاصله در حالت موبایل */
+@media (max-width: 768px) {
+    .slider-container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .slider-container p {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .search-container {
+        max-width: 100%; /* حداکثر عرض در حالت موبایل */
+    }
 }
-<!-- این یک کامنت نمونه است برای اهداف تمرینی -->
+/* نمایش در دسکتاپ (پیش‌فرض) */
+.trending-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 40px;
+}
+
+/* نمایش در تبلت */
+@media (max-width: 1024px) {
+    .trending-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+}
+
+/* نمایش در موبایل */
+@media (max-width: 768px) {
+    .trending-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+/* نمایش در موبایل‌های کوچک */
+@media (max-width: 480px) {
+    .trending-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
