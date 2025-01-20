@@ -41,9 +41,12 @@ footer {
     color: #ff9800; 
     margin-left: 10px; 
     align-self: flex-end; 
+    display: inline-block;
 }
 
-
+a { text-decoration: none; /* حذف خط زیر لینک */
+     color: inherit; /* حفظ رنگ اصلی متن */
+     }
 
 .btn-login {
     border-radius: 25px;
