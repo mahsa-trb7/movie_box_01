@@ -33,14 +33,14 @@ footer {
 }
 
 .logo-img {
-    height: 50px; /* ارتفاع دلخواه برای لوگو */
-    width: auto; /* عرض به طور خودکار تنظیم می‌شود */
+    height: 50px; 
+    width: auto; 
 }
 
 .logo-text {
-    color: #ff9800; /* رنگ نارنجی برای متن */
-    margin-left: 10px; /* فاصله بین لوگو و متن */
-    align-self: flex-end; /* تنظیم متن به پایین لوگو */
+    color: #ff9800; 
+    margin-left: 10px; 
+    align-self: flex-end; 
 }
 
 
